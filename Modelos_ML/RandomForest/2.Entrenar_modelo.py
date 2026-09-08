@@ -1,11 +1,12 @@
+import os
 import pandas as pd
 from sklearn.model_selection import train_test_split # pip install scikit-learn
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import classification_report, confusion_matrix
 import joblib
-import os
+import subprocess
 
-os.system("cls" if os.name == "nt" else "clear")
+subprocess.run("cls" if os.name == "nt" else "clear", shell=True)
 
 def log(title):
     print("\n" + "=" * 70)
@@ -74,6 +75,7 @@ try:
     # 7. GUARDAR MODELO
     # =========================
     log("6. GUARDANDO MODELO")
+    subprocess.run("cls" if subprocess.os.name == "nt" else "clear", shell=True)
     os.makedirs("Modelos_ML/RandomForest/models", exist_ok=True)
     modelo_path = "Modelos_ML/RandomForest/models/modelo_random_forest_ampliado.pkl"
     joblib.dump(model, modelo_path)
