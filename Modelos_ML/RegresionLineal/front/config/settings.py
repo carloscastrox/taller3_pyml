@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-n5^^tc)!2mxl5ez1o8x*4$=(qwmm#tmg+3zwl_51juou9#3tvs'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["127.0.0.1", "regresionfront.up.railway.app", "regresionback.up.railway.app"]
 
 
 # Application definition

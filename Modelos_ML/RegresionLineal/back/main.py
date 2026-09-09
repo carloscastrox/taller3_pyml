@@ -1,12 +1,16 @@
+from pathlib import Path
 import joblib
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, Field
 
 app = FastAPI(title="API de Predicción de Precios de Viviendas", description="Predicción de precios de viviendas según su superficie", version="1.0")
 
+BASE_DIR = Path(__file__).resolve().parent
+MODEL_PATH = BASE_DIR / "models/linear_model.joblib"
+
 try:
     # Cargar el modelo entrenado
-    model = joblib.load('models/linear_model.joblib')
+    model = joblib.load(MODEL_PATH)
 except Exception:
     model = None
 

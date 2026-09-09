@@ -1,4 +1,5 @@
 import joblib
+from pathlib import Path
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.linear_model import LinearRegression
@@ -36,4 +37,7 @@ model.fit(x, y)
 # plt.show()
 
 # Guardar el artefacto del modelo entrenado en un archivo
-joblib.dump(model, 'models/linear_model.joblib')
+BASE_DIR = Path(__file__).resolve().parent
+MODEL_PATH = BASE_DIR / "models/linear_model.joblib"
+
+joblib.dump(model, MODEL_PATH)
