@@ -6,7 +6,7 @@ app = FastAPI(title="API de Predicción de Precios de Viviendas", description="P
 
 try:
     # Cargar el modelo entrenado
-    model = joblib.load('Modelos_ML/RegresionLineal/models/linear_model.joblib')
+    model = joblib.load('models/linear_model.joblib')
 except Exception:
     model = None
 

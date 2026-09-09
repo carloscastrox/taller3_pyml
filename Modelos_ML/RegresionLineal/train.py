@@ -36,4 +36,4 @@ model.fit(x, y)
 # plt.show()
 
 # Guardar el artefacto del modelo entrenado en un archivo
-joblib.dump(model, 'Modelos_ML/RegresionLineal/models/linear_model.joblib')
+joblib.dump(model, 'models/linear_model.joblib')
