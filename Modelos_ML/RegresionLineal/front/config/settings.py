@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-n5^^tc)!2mxl5ez1o8x*4$=(qwmm#tmg+3zwl_51juou9#3tvs
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["127.0.0.1", "regresionfront.up.railway.app", "regresionback.up.railway.app"]
+ALLOWED_HOSTS = ["127.0.0.1", "rlfront.up.railway.app", "rlback.up.railway.app"]
 
 
 # Application definition
